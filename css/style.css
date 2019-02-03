@@ -159,3 +159,18 @@ h3 {
     /*bottom: 45px;
     right: 20px;*/
 }
+
+.counter {
+    position: absolute;
+    
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: Rationale;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 50px;
+    text-align: center;
+}
