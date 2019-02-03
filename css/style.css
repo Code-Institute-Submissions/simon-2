@@ -1,0 +1,161 @@
+.simon-container {
+
+    width: 284px;
+    height: 460px;
+    background: #535B76;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+body {
+    background: #4173F3;
+}
+
+/*.simon {
+    position: relative;
+    width: 151px;
+    height: 57px;
+    margin: auto;
+
+
+}*/
+
+.nopaddingleft {
+    padding-left: 0 !important;
+}
+
+.nopaddingright {
+    padding-right: 0 !important;
+}
+
+.colour-1 {
+
+    width: 126px;
+    height: 126px;
+
+    background: #FFE88E;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    /*right: 50%;*/
+}
+
+.colour-2 {
+
+    width: 126px;
+    height: 126px;
+
+    background: #6BFF70;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    /*left: 50%;*/
+}
+
+.colour-3 {
+
+    width: 126px;
+    height: 126px;
+    background: #FF6B6B;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    /*  right: 50%;
+    top: 40%;*/
+}
+
+.colour-4 {
+
+    width: 126px;
+    height: 126px;
+
+    background: #D28EFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    /*left: 50%;
+    top: 40%;*/
+}
+
+h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 48px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.strict-button {
+
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #C4C4C4;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /*  bottom: 80px;
+    left: 10px;
+    margin-left: 10px;*/
+}
+
+.start-button {
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #C4C4C4;
+    /*   bottom: 80px;
+    left: 40%;*/
+}
+
+h3 {
+
+
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+}
+
+.strict-light {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #F12828;
+    margin: auto;
+}
+
+/*.strict {
+    bottom: 40px;
+    left:10px;
+}
+
+.start {
+    bottom: 40px;
+    left: 37%;
+}*/
+
+.screen {
+
+    width: 63px;
+    height: 63px;
+    background: #9ECE9D;
+    /*bottom: 45px;
+    right: 20px;*/
+}
