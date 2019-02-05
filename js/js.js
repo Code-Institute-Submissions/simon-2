@@ -10,8 +10,7 @@ $(document).ready(function() {
     $(".counter").text("");
     $(".start").click(function() {
         console.log("level " + level);
-        $(".display").text(level);
-        level= 0;
+        $(".counter").text(level);
         level++;
         startSequence();
     })
@@ -38,21 +37,6 @@ function startSequence() {
     }, 1000);
 }
 
-//user 
-function userSequence(){
-    playerSequence.push(id);
-    console.log(id+ " " + color);
-    addClass(id, color);
-}
-
-//pad 
-
-  $(".colour-pads").click(function() {
-    id = $(this).attr("id");
-    color = $(this).attr("class").split(" ")[1];
-    playerSequence();
-  });
-
 //random number generator 
 function randomNumberGen() {
     var random = Math.floor(Math.random() * 4);
@@ -67,3 +51,20 @@ function addClass(id, color) {
         $("#" + id).removeClass(color + "-active");
     }, 600);
 }
+
+
+
+//user 
+function userSequence(){
+    playerSequence.push(id);
+    console.log(id+ " " + color);
+    addClass(id, color);
+}
+
+//pad 
+
+  $(".colour-pads").click(function() {
+    id = $(this).attr("id");
+    color = $(this).attr("class").split(" ")[1];
+    playerSequence();
+  });

@@ -31,38 +31,43 @@ body {
 }
 
 .yellow {
-    background: #FFE88E;
-
+    background: #edd684
 }
 
 .yellow-active {
-   background: #edd684 !important;
-   
+    background: #FFE88E;
+    !important;
+
 }
 
 .green {
-    background: #6BFF70;
+    background: #57d65c;
 }
 
 .green-active {
-    background: #57d65c !important;
+    background: #6BFF70;
+    !important;
 }
 
 .red {
-    background: #FF6B6B;
+
+    background: #d65c5c;
 }
 
 .red-active {
-    background: #d65c5c !important;
+    background: #FF6B6B;
+    !important;
 }
 
 
 .purple {
-    background: #D28EFF;
+
+    background: #ad74d3
 }
 
 .purple-active {
-    background: #ad74d3 !important;
+    background: #D28EFF;
+    !important;
 }
 
 h1 {
