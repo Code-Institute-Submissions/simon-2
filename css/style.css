@@ -1,9 +1,7 @@
 .simon-container {
-
     width: 284px;
     height: 460px;
     background: #535B76;
-
     position: absolute;
     left: 50%;
     top: 50%;
@@ -15,14 +13,7 @@ body {
     background: #4173F3;
 }
 
-/*.simon {
-    position: relative;
-    width: 151px;
-    height: 57px;
-    margin: auto;
 
-
-}*/
 
 .nopaddingleft {
     padding-left: 0 !important;
@@ -34,25 +25,44 @@ body {
 
 .colour-pads {
     width: 126px;
-    height: 126px; 
+    height: 126px;
     border: 2px solid #000000;
     box-sizing: border-box;
 }
-.yellow{
+
+.yellow {
     background: #FFE88E;
 
+}
+
+.yellow-active {
+   background: #edd684 !important;
+   
 }
 
 .green {
     background: #6BFF70;
 }
 
+.green-active {
+    background: #57d65c !important;
+}
+
 .red {
     background: #FF6B6B;
 }
 
+.red-active {
+    background: #d65c5c !important;
+}
+
+
 .purple {
     background: #D28EFF;
+}
+
+.purple-active {
+    background: #ad74d3 !important;
 }
 
 h1 {
@@ -140,7 +150,7 @@ h3 {
 
 .counter {
     position: absolute;
-    
+
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
