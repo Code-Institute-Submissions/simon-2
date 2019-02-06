@@ -1,15 +1,18 @@
 //vars 
 var playerSequence = [];
-var gameSequence = [0,1,2,3 ];
-const LEVELS = 3
+var gameSequence = [];
+const LEVELS = 3;
 var id, color, level = 0;
-var strict = false
+var strictMode = false
+var error = false
 
 //start game
 
 $(document).ready(function() {
     $(".counter").text("");
     $(".start").click(function() {
+        strictMode = false;
+        error = false;
         console.log("level " + level);
         level++;
         startSequence();
@@ -17,32 +20,49 @@ $(document).ready(function() {
 })
 
 //pad presses
-  $(".colour-pads").click(function() {
+$(".colour-pads").click(function() {
     id = $(this).attr("id");
     color = $(this).attr("class").split(" ")[1];
-    addClass(id,color)
+    addClass(id, color)
     playerSequence.push(id);
-    console.log(id+" "+color)
-    if (!checkSequence()){
+    console.log(id + " " + color)
+    //check sequence
+    if (!checkSequence()) {
+        error = true;
         showError();
         playerSequence = [];
+        startSequence();
+        if (strictMode) {
+            console.log("strictMode");
+            simonSeq = [];
+            level = 1;
+        }
     }
-    //check sequence
-    if (playerSequence.length == gameSequence.length) {
+    if (playerSequence.length == gameSequence.length && playerSequence.length < LEVELS) {
         level++;
+        error = false;
         playerSequence = [];
         startSequence();
     }
-    playerSequence();
-  });
-  
+    //winner  broken
+     if(playerSequence.length == LEVELS){
+     $(".counter").text("Win");
+     }
+    
+});
+
 
 // functions
 //start
 function startSequence() {
     console.log(level);
     $(".counter").text(level);
-    randomNumberGen();
+    if (!error) {
+        randomNumberGen();
+    }
+    if (error && strictMode) {
+        randomNumberGen();
+    }
     var i = 0;
     var gameInterval = setInterval(function() {
         id = gameSequence[i];
@@ -76,45 +96,39 @@ function addClass(id, color) {
 
 
 //player
-function userSequence(){
+function userSequence() {
     playerSequence.push(id);
-    console.log(id+ " " + color);
+    console.log(id + " " + color);
     addClass(id, color);
 }
 
 
-  
-  // see if user correct
-  
-  function checkSequence(){
-      for(var i = 0; i < playerSequence.length; i++){
-          if(playerSequence[i] != gameSequence[i]){
-              return false;
-          }
-      }
-      return true
-      if(strict){
-          startSequence();
-      } else {
-          gameSequence = true;
-          playerSequence = [];
-          gameInterval=setInterval(gameSequence, 700);
-      }
-      
-  }
-  
-  //error
-  
-  function showError(){
-      console.log("error");
-      var counter = 0;
-      $(".counter").text("!!");
-      var error = setInterval(function(){
-          counter++;
-          if (counter = 3){
-              clearInterval(error);
-              playerSequence = [];
-              counter = 0;
-          }
-      }, 1000);
-  }
+
+// see if user correct
+
+function checkSequence() {
+    for (var i = 0; i < playerSequence.length; i++) {
+        if (playerSequence[i] != gameSequence[i]) {
+            return false;
+        }
+    }
+    return true
+
+}
+
+//error
+
+function showError() {
+    console.log("error");
+    var counter = 0;
+    $(".counter").text("!!");
+    var error = setInterval(function() {
+        counter++;
+        if (counter = 3) {
+            $(".counter").text(level);
+            clearInterval(error);
+            playerSequence = [];
+            counter = 0;
+        }
+    }, 1000);
+}
