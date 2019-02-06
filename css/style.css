@@ -35,8 +35,7 @@ body {
 }
 
 .yellow-on {
-    background: #FFE88E
-    !important;
+    background: #FFE88E !important;
 
 }
 
@@ -45,8 +44,7 @@ body {
 }
 
 .green-on {
-    background: #6BFF70
-    !important;
+    background: #6BFF70 !important;
 }
 
 .red {
@@ -55,8 +53,7 @@ body {
 }
 
 .red-on {
-    background: #FF6B6B
-    !important;
+    background: #FF6B6B !important;
 }
 
 
@@ -66,8 +63,7 @@ body {
 }
 
 .purple-on {
-    background: #D28EFF
-    !important;
+    background: #D28EFF !important;
 }
 
 h1 {
@@ -135,26 +131,14 @@ h3 {
 }
 
 .strict-light-on {
-    
+    background: blue;
 }
-
-/*.strict {
-    bottom: 40px;
-    left:10px;
-}
-
-.start {
-    bottom: 40px;
-    left: 37%;
-}*/
 
 .screen {
 
     width: 63px;
     height: 63px;
     background: #9ECE9D;
-    /*bottom: 45px;
-    right: 20px;*/
 }
 
 .counter {

@@ -16,6 +16,7 @@ $(document).ready(function() {
         console.log("level " + level);
         level++;
         startSequence();
+       
     })
 })
 
@@ -36,6 +37,7 @@ $(".colour-pads").click(function() {
             console.log("strictMode");
             simonSeq = [];
             level = 1;
+           
         }
     }
     if (playerSequence.length == gameSequence.length && playerSequence.length < LEVELS) {
@@ -45,10 +47,10 @@ $(".colour-pads").click(function() {
         startSequence();
     }
     //winner  broken
-     if(playerSequence.length == LEVELS){
-     $(".counter").text("Win");
-     }
-    
+    if (playerSequence.length == LEVELS) {
+        $(".counter").text("Win");
+    }
+
 });
 
 
@@ -91,6 +93,10 @@ function addClass(id, color) {
     setTimeout(function() {
         $("#" + id).removeClass(color + "-on");
     }, 600);
+}
+
+function addClassStrict() {
+       $(".strict-light").addClass( "strict-light-on");
 }
 
 
