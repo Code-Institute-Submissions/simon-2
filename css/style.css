@@ -34,8 +34,8 @@ body {
     background: #edd684
 }
 
-.yellow-active {
-    background: #FFE88E;
+.yellow-on {
+    background: #FFE88E
     !important;
 
 }
@@ -44,8 +44,8 @@ body {
     background: #57d65c;
 }
 
-.green-active {
-    background: #6BFF70;
+.green-on {
+    background: #6BFF70
     !important;
 }
 
@@ -54,8 +54,8 @@ body {
     background: #d65c5c;
 }
 
-.red-active {
-    background: #FF6B6B;
+.red-on {
+    background: #FF6B6B
     !important;
 }
 
@@ -65,8 +65,8 @@ body {
     background: #ad74d3
 }
 
-.purple-active {
-    background: #D28EFF;
+.purple-on {
+    background: #D28EFF
     !important;
 }
 
@@ -132,6 +132,10 @@ h3 {
     border-radius: 50%;
     background: #F12828;
     margin: auto;
+}
+
+.strict-light-on {
+    
 }
 
 /*.strict {
