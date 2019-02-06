@@ -126,12 +126,12 @@ h3 {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: #F12828;
+    background: #9b1818;
     margin: auto;
 }
 
 .strict-light-on {
-    background: blue;
+    background: #F12828;
 }
 
 .screen {

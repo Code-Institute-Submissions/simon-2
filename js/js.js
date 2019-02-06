@@ -16,8 +16,10 @@ $(document).ready(function() {
         console.log("level " + level);
         level++;
         startSequence();
-       
     })
+    if (strictMode) {
+            addClassStrict();
+        }
 })
 
 //pad presses
@@ -37,7 +39,7 @@ $(".colour-pads").click(function() {
             console.log("strictMode");
             simonSeq = [];
             level = 1;
-           
+            addClassStrict();
         }
     }
     if (playerSequence.length == gameSequence.length && playerSequence.length < LEVELS) {
@@ -96,7 +98,7 @@ function addClass(id, color) {
 }
 
 function addClassStrict() {
-       $(".strict-light").addClass( "strict-light-on");
+    $(".strict-light").addClass("strict-light-on");
 }
 
 
