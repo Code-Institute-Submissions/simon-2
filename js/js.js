@@ -3,42 +3,44 @@ var playerSequence = [];
 var gameSequence = [];
 const LEVELS = 3;
 var id, color, level = 0;
-var strictMode = false
-var error = false
+var strictMode = false;
+var error = false;
 
 //start game
 
 $(document).ready(function() {
     $(".counter").text("");
     $(".start").click(function() {
+        gameSequence = [];
         error = false;
         console.log("level " + level);
         level = 0;
         level++;
         startSequence();
-    })
+    });
     //strict mode button
     $(".strict-button").click(function() {
         //toggle true or false.
-        strictMode = !strictMode
+        strictMode = !strictMode;
+        level = 0;
+        level++;
         //light
         addClassStrict();
         console.log(strictMode);
-        gameSequence = []
+        gameSequence = [];
         playerSequence = [];
-        level = 1;
-        level++;
-    })
-})
+
+    });
+});
 
 
 //pad presses
 $(".colour-pads").click(function() {
     id = $(this).attr("id");
     color = $(this).attr("class").split(" ")[1];
-    addClass(id, color)
+    addClass(id, color);
     playerSequence.push(id);
-    console.log(id + " " + color)
+    console.log(id + " " + color);
     //check sequence
     if (!checkSequence()) {
         showError();
@@ -74,9 +76,9 @@ function startSequence() {
     if (!error) {
         randomNumberGen();
     }
-     if (error && strictMode) {
-       randomNumberGen();
-     }
+    if (error && strictMode) {
+        randomNumberGen();
+    }
     var i = 0;
     var gameInterval = setInterval(function() {
         id = gameSequence[i];
@@ -114,11 +116,11 @@ function addClassStrict() {
 
 
 //player
-function userSequence() {
-    playerSequence.push(id);
-    console.log(id + " " + color);
-    addClass(id, color);
-}
+//function playerSequence() {
+    //playerSequence.push(id);
+   // console.log(id + " " + color);
+   // addClass(id, color);
+//}
 
 
 
@@ -130,7 +132,7 @@ function checkSequence() {
             return false;
         }
     }
-    return true
+    return true;
 
 }
 
@@ -142,7 +144,7 @@ function showError() {
     $(".counter").text("!!");
     var error = setInterval(function() {
         counter++;
-        if (counter = 3) {
+        if (counter == 3) {
             $(".counter").text(level);
             clearInterval(error);
             playerSequence = [];
