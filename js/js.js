@@ -9,134 +9,141 @@ var error = false
 //start game
 
 $(document).ready(function() {
-            $(".counter").text("");
-            $(".start").click(function() {
-                strictMode = false;
-                error = false;
-                console.log("level " + level);
-                level++;
-                startSequence();
-            })
-            $(".strict-button").click(function() {
-                    strictMode = true;
-                    addClassStrict();
-                })
-            })
+    $(".counter").text("");
+    $(".start").click(function() {
+        strictMode = false;
+        error = false;
+        console.log("level " + level);
+        level++;
+        startSequence();
+    })
+})
+//strict mode button
+$(".strict-button").click(function() {
+   //toggle true/false.
+    strictMode = ! strictMode
+    addClassStrict();
+    console.log(strictMode);
+    level = 0;
+    level++;
+    gameSequence = []
+    playerSequence = [];
+})
 
-        //pad presses
-        $(".colour-pads").click(function() {
-            id = $(this).attr("id");
-            color = $(this).attr("class").split(" ")[1];
-            addClass(id, color)
-            playerSequence.push(id);
-            console.log(id + " " + color)
-            //check sequence
-            if (!checkSequence()) {
-                error = true;
-                showError();
-                playerSequence = [];
-                startSequence();
-                if (strictMode) {
-                    console.log("strictMode");
-                    simonSeq = [];
-                    level = 1;
-                }
-            }
-            if (playerSequence.length == gameSequence.length && playerSequence.length < LEVELS) {
-                level++;
-                error = false;
-                playerSequence = [];
-                startSequence();
-            }
-            //winner  broken
-            if (playerSequence.length == LEVELS) {
-                $(".counter").text("Win");
-            }
+//pad presses
+$(".colour-pads").click(function() {
+    id = $(this).attr("id");
+    color = $(this).attr("class").split(" ")[1];
+    addClass(id, color)
+    playerSequence.push(id);
+    console.log(id + " " + color)
+    //check sequence
+    if (!checkSequence()) {
+        error = true;
+        showError();
+        playerSequence = [];
+        startSequence();
+        if (strictMode) {
+            console.log("strictMode");
+            simonSeq = [];
+            level = 1;
+        }
+    }
+    if (playerSequence.length == gameSequence.length && playerSequence.length < LEVELS) {
+        level++;
+        error = false;
+        playerSequence = [];
+        startSequence();
+    }
+    //winner  broken
+    if (playerSequence.length == LEVELS) {
+        $(".counter").text("Win");
+    }
 
-        });
+});
 
 
-        // functions
-        //start
-        function startSequence() {
-            console.log(level);
+// functions
+//start
+function startSequence() {
+    console.log(level);
+    $(".counter").text(level);
+    if (!error) {
+        randomNumberGen();
+    }
+    if (error && strictMode) {
+        randomNumberGen();
+    }
+    var i = 0;
+    var gameInterval = setInterval(function() {
+        id = gameSequence[i];
+        color = $("#" + id).attr("class");
+        color = color.split(" ")[1];
+        console.log(id + " " + color);
+        addClass(id, color);
+        i++;
+        if (i == gameSequence.length) {
+            i = 0;
+            clearInterval(gameInterval);
+        }
+    }, 1000);
+}
+
+//random number generator 
+function randomNumberGen() {
+    var random = Math.floor(Math.random() * 4);
+    gameSequence.push(random);
+}
+
+//add class colors
+
+function addClass(id, color) {
+    $("#" + id).addClass(color + "-on");
+    setTimeout(function() {
+        $("#" + id).removeClass(color + "-on");
+    }, 600);
+}
+
+function addClassStrict() {
+    $(".strict-light").toggleClass("strict-light-on");
+}
+
+
+
+//player
+function userSequence() {
+    playerSequence.push(id);
+    console.log(id + " " + color);
+    addClass(id, color);
+}
+
+
+
+// see if user correct
+
+function checkSequence() {
+    for (var i = 0; i < playerSequence.length; i++) {
+        if (playerSequence[i] != gameSequence[i]) {
+            return false;
+        }
+    }
+    return true
+
+}
+
+//error
+
+function showError() {
+    console.log("error");
+    var counter = 0;
+    $(".counter").text("!!");
+    var error = setInterval(function() {
+        counter++;
+        if (counter = 3) {
             $(".counter").text(level);
-            if (!error) {
-                randomNumberGen();
-            }
-            if (error && strictMode) {
-                randomNumberGen();
-            }
-            var i = 0;
-            var gameInterval = setInterval(function() {
-                id = gameSequence[i];
-                color = $("#" + id).attr("class");
-                color = color.split(" ")[1];
-                console.log(id + " " + color);
-                addClass(id, color);
-                i++;
-                if (i == gameSequence.length) {
-                    i = 0;
-                    clearInterval(gameInterval);
-                }
-            }, 1000);
+            clearInterval(error);
+            playerSequence = [];
+            counter = 0;
         }
-
-        //random number generator 
-        function randomNumberGen() {
-            var random = Math.floor(Math.random() * 4);
-            gameSequence.push(random);
-        }
-
-        //add class colors
-
-        function addClass(id, color) {
-            $("#" + id).addClass(color + "-on");
-            setTimeout(function() {
-                $("#" + id).removeClass(color + "-on");
-            }, 600);
-        }
-
-        function addClassStrict() {
-            $(".strict-light").toggleClass("strict-light-on");
-        }
-
-
-
-        //player
-        function userSequence() {
-            playerSequence.push(id);
-            console.log(id + " " + color);
-            addClass(id, color);
-        }
-
-
-
-        // see if user correct
-
-        function checkSequence() {
-            for (var i = 0; i < playerSequence.length; i++) {
-                if (playerSequence[i] != gameSequence[i]) {
-                    return false;
-                }
-            }
-            return true
-
-        }
-
-        //error
-
-        function showError() {
-            console.log("error");
-            var counter = 0;
-            $(".counter").text("!!");
-            var error = setInterval(function() {
-                counter++;
-                if (counter = 3) {
-                    $(".counter").text(level);
-                    clearInterval(error);
-                    playerSequence = [];
-                    counter = 0;
-                }
-            }, 1000);
-        }
+    }, 1000);
+}
