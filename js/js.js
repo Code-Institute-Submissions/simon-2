@@ -11,7 +11,6 @@ var error = false
 $(document).ready(function() {
     $(".counter").text("");
     $(".start").click(function() {
-        strictMode = false;
         error = false;
         console.log("level " + level);
         level++;
@@ -20,14 +19,16 @@ $(document).ready(function() {
 })
 //strict mode button
 $(".strict-button").click(function() {
-   //toggle true/false.
-    strictMode = ! strictMode
+    //toggle true/false.
+    strictMode = !strictMode
+    //light
     addClassStrict();
     console.log(strictMode);
-    level = 0;
-    level++;
     gameSequence = []
     playerSequence = [];
+    level = 0;
+    level++;
+
 })
 
 //pad presses
@@ -45,7 +46,7 @@ $(".colour-pads").click(function() {
         startSequence();
         if (strictMode) {
             console.log("strictMode");
-            simonSeq = [];
+            gameSequence = [];
             level = 1;
         }
     }
