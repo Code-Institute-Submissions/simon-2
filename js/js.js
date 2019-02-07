@@ -13,23 +13,24 @@ $(document).ready(function() {
     $(".start").click(function() {
         error = false;
         console.log("level " + level);
+        level = 0;
         level++;
         startSequence();
     })
+    //strict mode button
+    $(".strict-button").click(function() {
+        //toggle true or false.
+        strictMode = !strictMode
+        //light
+        addClassStrict();
+        console.log(strictMode);
+        gameSequence = []
+        playerSequence = [];
+        level = 1;
+        level++;
+    })
 })
-//strict mode button
-$(".strict-button").click(function() {
-    //toggle true/false.
-    strictMode = !strictMode
-    //light
-    addClassStrict();
-    console.log(strictMode);
-    gameSequence = []
-    playerSequence = [];
-    level = 0;
-    level++;
 
-})
 
 //pad presses
 $(".colour-pads").click(function() {
@@ -40,14 +41,15 @@ $(".colour-pads").click(function() {
     console.log(id + " " + color)
     //check sequence
     if (!checkSequence()) {
-        error = true;
         showError();
+        error = true;
         playerSequence = [];
         startSequence();
         if (strictMode) {
             console.log("strictMode");
             gameSequence = [];
             level = 1;
+            startSequence();
         }
     }
     if (playerSequence.length == gameSequence.length && playerSequence.length < LEVELS) {
@@ -72,9 +74,9 @@ function startSequence() {
     if (!error) {
         randomNumberGen();
     }
-    if (error && strictMode) {
-        randomNumberGen();
-    }
+     if (error && strictMode) {
+       randomNumberGen();
+     }
     var i = 0;
     var gameInterval = setInterval(function() {
         id = gameSequence[i];
@@ -147,4 +149,5 @@ function showError() {
             counter = 0;
         }
     }, 1000);
+
 }
