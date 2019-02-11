@@ -48,7 +48,7 @@ $(".colour-pads").click(function() {
             gameSequence = [];
             level = 1;
             playerSequence = [];
-            startSequence();
+           // startSequence();
 
         }
         showError();
