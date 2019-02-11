@@ -1,7 +1,7 @@
 //vars 
 var playerSequence = [];
 var gameSequence = [];
-const LEVELS = 3;
+const LEVELS = 20;
 var id, color, level = 0;
 var strictMode = false;
 var error = false;
@@ -43,16 +43,16 @@ $(".colour-pads").click(function() {
     console.log(id + " " + color);
     //check sequence
     if (!checkSequence()) {
-        showError();
-        error = true;
-        playerSequence = [];
-        startSequence();
         if (strictMode) {
             console.log("strictMode");
             gameSequence = [];
             level = 1;
             startSequence();
         }
+        showError();
+        error = true;
+        playerSequence = [];
+        startSequence();
     }
     if (playerSequence.length == gameSequence.length && playerSequence.length < LEVELS) {
         level++;
@@ -117,9 +117,9 @@ function addClassStrict() {
 
 //player
 //function playerSequence() {
-    //playerSequence.push(id);
-   // console.log(id + " " + color);
-   // addClass(id, color);
+//playerSequence.push(id);
+// console.log(id + " " + color);
+// addClass(id, color);
 //}
 
 
@@ -141,8 +141,8 @@ function checkSequence() {
 function showError() {
     console.log("error");
     var counter = 0;
-    $(".counter").text("!!");
     var error = setInterval(function() {
+        $(".counter").text("!!");
         counter++;
         if (counter == 3) {
             $(".counter").text(level);
@@ -150,6 +150,5 @@ function showError() {
             playerSequence = [];
             counter = 0;
         }
-    }, 1000);
-
+    }, 400);
 }
