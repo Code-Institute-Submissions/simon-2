@@ -60,7 +60,7 @@ $(".colour-pads").click(function() {
         playerSequence = [];
         startSequence();
     }
-    //winner  broken
+    //winner  
     if (playerSequence.length == LEVELS) {
         $(".counter").text("Win");
     }
