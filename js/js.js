@@ -46,8 +46,11 @@ $(".colour-pads").click(function() {
         if (strictMode) {
             console.log("strictMode");
             gameSequence = [];
-            level = 1;
+            level = 0;
+            level++;
+            playerSequence = [];
             startSequence();
+
         }
         showError();
         error = true;
