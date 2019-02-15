@@ -117,12 +117,7 @@ function addClassStrict() {
 
 
 
-//player
-//function playerSequence() {
-//playerSequence.push(id);
-// console.log(id + " " + color);
-// addClass(id, color);
-//}
+
 
 
 
