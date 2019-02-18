@@ -38,7 +38,7 @@ $(document).ready(function() {
 $(".colour-pads").click(function() {
     id = $(this).attr("id");
     color = $(this).attr("class").split(" ")[1];
-    addClass(id, color);
+    makeActive(id, color);
     playerSequence.push(id);
     console.log(id + " " + color);
     //check sequence
@@ -87,7 +87,7 @@ function startSequence() {
         color = $("#" + id).attr("class");
         color = color.split(" ")[1];
         console.log(id + " " + color);
-        addClass(id, color);
+        makeActive(id, color);
         i++;
         if (i == gameSequence.length) {
             i = 0;
@@ -104,7 +104,7 @@ function randomNumberGen() {
 
 //add class colors
 
-function addClass(id, color) {
+function makeActive(id, color) {
     $("#" + id).addClass(color + "-on");
     setTimeout(function() {
         $("#" + id).removeClass(color + "-on");
