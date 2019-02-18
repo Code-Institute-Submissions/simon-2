@@ -144,3 +144,43 @@ h3 {
     font-size: 45px;
     text-align: center;
 }
+
+/*tablet*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .simon-container {
+        width: 80%;
+        height: 60%;
+
+    }
+
+    .colour-pads {
+        width: 100%;
+    }
+
+    .screen {
+        width: 100%;
+    }
+}
+
+
+/* ipad pro below */
+
+@media (min-width: 1024px) and (max-width: 1025px) and (orientation: portrait) {
+
+    .simon-container {
+        width: 70%;
+        height: 40%;
+
+    }
+
+    .colour-pads {
+        width: 100%;
+    }
+
+    .screen {
+        width: 100%;
+    }
+
+}
