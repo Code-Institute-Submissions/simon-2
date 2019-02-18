@@ -164,15 +164,24 @@ h3 {
     }
 }
 
+@media (min-width: 1024px) and (max-width: 1025px) and (orientation: landscape){
+
+    .simon-container {
+        width: 80%;
+        height: auto;
+    }
+
+
+}
+
 
 /* ipad pro below */
 
 @media (min-width: 1024px) and (max-width: 1025px)  {
 
     .simon-container {
-        width: 70%;
+        width: 80%;
         height: 40%;
-
     }
 
     .colour-pads {
