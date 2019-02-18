@@ -1,3 +1,29 @@
+body {
+    background: #4173F3;
+}
+
+h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 48px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+
 .simon-container {
     width: 284px;
     height: 460px;
@@ -8,11 +34,6 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-
-body {
-    background: #4173F3;
-}
-
 
 
 .nopaddingleft {
@@ -66,18 +87,8 @@ body {
     background: #D28EFF !important;
 }
 
-h1 {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 48px;
-    text-align: center;
-    color: #FFFFFF;
-}
 
 .strict-button {
-
     width: 38px;
     height: 38px;
     border-radius: 50%;
@@ -87,13 +98,9 @@ h1 {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    /*  bottom: 80px;
-    left: 10px;
-    margin-left: 10px;*/
 }
 
 .start-button {
-
     position: absolute;
     left: 50%;
     top: 50%;
@@ -102,25 +109,9 @@ h1 {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: #C4C4C4;
-    /*   bottom: 80px;
-    left: 40%;*/
+    background: #e4e4e4;
 }
 
-h3 {
-
-
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 24px;
-    text-align: center;
-
-    color: #FFFFFF;
-
-}
 
 .strict-light {
     width: 14px;
@@ -135,7 +126,6 @@ h3 {
 }
 
 .screen {
-
     width: 63px;
     height: 63px;
     background: #9ECE9D;
@@ -143,7 +133,6 @@ h3 {
 
 .counter {
     position: absolute;
-
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
