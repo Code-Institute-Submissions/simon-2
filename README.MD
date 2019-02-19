@@ -69,7 +69,7 @@ this worked more better, especially on Ipad pro which was the hardest size to fi
 
 <h2>Deployment</h2>
 Site was created in the cloud9 IDE. Then it was published to github pages.
-<a href="https://dougd94.github.io/the-monkees/index.html">Link to Github Pages</a> 
+<a href="https://dougd94.github.io/simon/">Link to Github Pages</a> 
 
 
 <h2>Credits</h2>
