@@ -6,6 +6,14 @@ var id, color, level = 0;
 var strictMode = false;
 var error = false;
 
+var gameSound = [
+    "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3", // yellow
+    "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3", // green
+    "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3", // red
+    "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" // purple
+];
+
+
 //start game
 
 $(document).ready(function() {
@@ -48,7 +56,7 @@ $(".colour-pads").click(function() {
             gameSequence = [];
             level = 1;
             playerSequence = [];
-           // startSequence();
+            // startSequence();
 
         }
         showError();
@@ -106,6 +114,7 @@ function randomNumberGen() {
 
 function makeActive(id, color) {
     $("#" + id).addClass(color + "-on");
+    playSound(id);
     setTimeout(function() {
         $("#" + id).removeClass(color + "-on");
     }, 600);
@@ -136,6 +145,7 @@ function checkSequence() {
 //error
 
 function showError() {
+    errorTone();
     console.log("error");
     var counter = 0;
     var error = setInterval(function() {
@@ -148,4 +158,14 @@ function showError() {
             counter = 0;
         }
     }, 400);
+}
+
+function playSound(id) {
+    var sound = new Audio(gameSound[id]);
+    sound.play();
+}
+
+function errorTone() {
+    var sound = new Audio("https://s3.amazonaws.com/adam-recvlohe-sounds/error.wav");
+    sound.play();
 }

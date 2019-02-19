@@ -205,4 +205,8 @@ h3 {
         width: 100%;
         height: 250px;
     }
+    
+    .screen {
+        width: 100%;
+    }
 }
