@@ -74,12 +74,10 @@ Site was created in the cloud9 IDE. Then it was published to github pages.
 
 <h2>Credits</h2>
 Content
-The text for "The Band" page was copied off the following wikipedia articles. 
-<a href="https://en.wikipedia.org/wiki/Davy_Jones_(musician)">Davy Jones</a>
-<a href="https://en.wikipedia.org/wiki/Peter_Tork">Peter Tork</a>
-<a href="https://en.wikipedia.org/wiki/Michael_Nesmith">Michael Nesmith</a>
-<a href="https://en.wikipedia.org/wiki/Micky_Dolenz">Micky Dolenz</a>
-<a href="https://en.wikipedia.org/wiki/The_Monkees">The Monkees</a>
+Sounds were got from these links: 
+<a href="https://medium.com/@arecvlohe/lets-build-a-simon-game-in-reasonreact-pt-3-sounds-27349f7b7fab">Error</a>
+<a href="https://gist.github.com/micahbales/32f2afe2f33bcbafca786387bd359cbc">The Colour Pads</a>
+
 
 The Text for "Index" page was copied off of the following pages.
 <a href="https://yulefestkilkenny.ie/">Yulefest</a>
