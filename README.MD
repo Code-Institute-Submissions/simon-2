@@ -75,6 +75,7 @@ Site was created in the cloud9 IDE. Then it was published to github pages.
 <h2>Credits</h2>
 Content
 Sounds were got from these links: 
+<br>
 <a href="https://medium.com/@arecvlohe/lets-build-a-simon-game-in-reasonreact-pt-3-sounds-27349f7b7fab">Error</a>
 <br>
 <a href="https://gist.github.com/micahbales/32f2afe2f33bcbafca786387bd359cbc">The Colour Pads</a>
