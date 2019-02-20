@@ -38,7 +38,7 @@ simon game.
 </ul>
 
 <h2>Testing</h2>
-I have tested this website across different browsers and multiple mobile devices.
+I have tested this game website across different browsers and multiple mobile devices.
 I gave the Github pages link to multiple people and had them go through the site to see if the UX and to check if there was any 
 errors.
 <ol>
@@ -73,20 +73,15 @@ Site was created in the cloud9 IDE. Then it was published to github pages.
 
 
 <h2>Credits</h2>
-Content
-Sounds were got from these links: 
+Content sound were got from these links: 
 <br>
 <a href="https://medium.com/@arecvlohe/lets-build-a-simon-game-in-reasonreact-pt-3-sounds-27349f7b7fab">Error</a>
 <br>
 <a href="https://gist.github.com/micahbales/32f2afe2f33bcbafca786387bd359cbc">The Colour Pads</a>
 
 
-The Text for "Index" page was copied off of the following pages.
-<a href="https://yulefestkilkenny.ie/">Yulefest</a>
-<a href="http://durrowscarecrowfestival.com/">Scarecrow Festival</a>
+The game is based on the popular simon toy.
+<a href="https://en.wikipedia.org/wiki/Simon_(game)">Simon</a>
 
-The Text for the 'Footer' was copied off the following page.
-<a href="https://www.biography.com/people/groups/the-monkees">Biography - The Monkees</a>
-
-Images were downloaded off of google images.
-Music and Video were taken off the code institute repository for this project.
+I used the colour wheel to find complimenting colours
+<a href="https://www.sessions.edu/color-calculator/">Colour Wheel</a>

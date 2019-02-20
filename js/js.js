@@ -126,10 +126,6 @@ function addClassStrict() {
 
 
 
-
-
-
-
 // see if user correct
 
 function checkSequence() {
@@ -159,6 +155,8 @@ function showError() {
         }
     }, 400);
 }
+
+//sound functions
 
 function playSound(id) {
     var sound = new Audio(gameSound[id]);
