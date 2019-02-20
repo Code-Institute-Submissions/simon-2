@@ -129,7 +129,7 @@ function addClassStrict() {
 // see if user correct
 
 function checkSequence(a, b) {
-    for (var i = 0; i < playerSequence.length; i++) {
+    for (var i = 0; i < a.length; i++) {
         if (a[i] != b[i]) {
             return false;
         }
