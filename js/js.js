@@ -50,7 +50,7 @@ $(".colour-pads").click(function() {
     playerSequence.push(id);
     console.log(id + " " + color);
     //check sequence
-    if (!checkSequence()) {
+    if (!checkSequence(playerSequence, gameSequence)) {
         if (strictMode) {
             console.log("strictMode");
             gameSequence = [];
@@ -128,9 +128,9 @@ function addClassStrict() {
 
 // see if user correct
 
-function checkSequence() {
+function checkSequence(a, b) {
     for (var i = 0; i < playerSequence.length; i++) {
-        if (playerSequence[i] != gameSequence[i]) {
+        if (a[i] != b[i]) {
             return false;
         }
     }
