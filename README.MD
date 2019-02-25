@@ -36,7 +36,8 @@ simon game.
 </ul>
 
 <h2>Testing</h2>
-I utilised jasmine testing on this project, you can run the tests using this link <a href="jasmine.html">Run Jasmine Testing</a>
+I utilised jasmine testing on this project, you can run the tests using this link: <a href="https://dougd94.github.io/simon/jasmine.html">Run Jasmine Testing</a>
+<br>
 I have tested this game website across different browsers and multiple mobile devices.
 I gave the Github pages link to multiple people and had them go use the game to see if the UX and to check if there was any 
 errors.
