@@ -16,7 +16,7 @@ simon game.
 <li>User Story: I can win the game by getting to level 20. I am notified of my victory visually.</li>
 </ul>
 
-<a href="https://www.figma.com/file/f3LqiWh2yNpwli9On1VCGfbI/simon-wireframe?node-id=0%3A1">Original Figma Wireframe</a>
+<a href="https://www.figma.com/file/f3LqiWh2yNpwli9On1VCGfbI/simon-wireframe?node-id=0%3A1" target="_blank">Original Figma Wireframe</a>
 
 
 <h2> Features </h2>
