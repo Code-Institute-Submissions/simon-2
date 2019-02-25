@@ -64,7 +64,7 @@ $(".colour-pads").click(function() {
         playerSequence = [];
         startSequence();
     }
-    if (playerSequence.length == gameSequence.length && playerSequence.length < LEVELS) {
+    if (playerSequence.length === gameSequence.length && playerSequence.length < LEVELS) {
         level++;
         error = false;
         playerSequence = [];
@@ -78,8 +78,8 @@ $(".colour-pads").click(function() {
 });
 
 
-// functions
-//start
+
+//starts the game
 function startSequence() {
     console.log(level);
     $(".counter").text(level);
@@ -104,13 +104,13 @@ function startSequence() {
     }, 1000);
 }
 
-//random number generator 
+//generate a random number
 function randomNumberGen() {
     var random = Math.floor(Math.random() * 4);
     gameSequence.push(random);
 }
 
-//add class colors
+//add class colors and play sound
 
 function makeActive(id, color) {
     $("#" + id).addClass(color + "-on");
@@ -129,7 +129,7 @@ function addClassStrict() {
 // see if user correct
 
 function checkSequence(a, b) {
-    for (var i = 0; i < a.length; i++) {
+    for (let i = 0; i < a.length; i++) {
         if (a[i] != b[i]) {
             return false;
         }

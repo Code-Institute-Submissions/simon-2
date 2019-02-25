@@ -165,18 +165,18 @@ h3 {
 }
 
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+/*@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
 
     .colour-pads {
         width: 100%;
         height: 100px;
     }
 
-}
+} */
 
 /* ipad pro below */
 
-@media only screen and (min-width: 1024px) and (max-width: 1024px) {
+/* @media only screen and (min-width: 1024px) and (max-width: 1024px) {
 
     .simon-container {
         width: 80%;
@@ -208,4 +208,4 @@ h3 {
     .screen {
         width: 100%;
     }
-}
+}*/
