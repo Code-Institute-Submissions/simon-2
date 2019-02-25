@@ -46,7 +46,7 @@ errors.
 
 
 <li>Media Queries:
-<ol><li>Go to the Any page</li>
+<ol>
 <li>Check in developer tools that all the relevant media queries are activating.</li>
 <li>Check that site looks good on all common screen sizes.</li></ol></li>
 
