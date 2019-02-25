@@ -31,6 +31,7 @@ simon game.
 <li>Bootstrap</li>
 <li>Javascript</li>
 <li>JQuery</li>
+<li>Jasmine</li>
 </ul></li>
 </ul>
 
