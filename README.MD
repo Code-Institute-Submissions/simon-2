@@ -36,7 +36,7 @@ simon game.
 </ul>
 
 <h2>Testing</h2>
-I utilised jasmine testing on this project, you can run the tests using this link: <a href="https://dougd94.github.io/simon/jasmine.html">Run Jasmine Testing</a>
+I utilised jasmine testing on this project, you can run the tests using this link: <a href="https://dougd94.github.io/simon/jasmine.html" target="_blank">Run Jasmine Testing</a>
 <br>
 I have tested this game website across different browsers and multiple mobile devices.
 I gave the Github pages link to multiple people and had them go use the game to see if the UX and to check if there was any 
@@ -65,19 +65,19 @@ errors.
 
 <h2>Deployment</h2>
 Site was created in the cloud9 IDE. Then it was published to github pages.
-<a href="https://dougd94.github.io/simon/">Link to Github Pages</a> 
+<a href="https://dougd94.github.io/simon/" target="_blank">Link to Github Pages</a> 
 
 
 <h2>Credits</h2>
 Content sound were got from these links: 
 <br>
-<a href="https://medium.com/@arecvlohe/lets-build-a-simon-game-in-reasonreact-pt-3-sounds-27349f7b7fab">Error</a>
+<a href="https://medium.com/@arecvlohe/lets-build-a-simon-game-in-reasonreact-pt-3-sounds-27349f7b7fab" target="_blank">Error</a>
 <br>
-<a href="https://gist.github.com/micahbales/32f2afe2f33bcbafca786387bd359cbc">The Colour Pads</a>
+<a href="https://gist.github.com/micahbales/32f2afe2f33bcbafca786387bd359cbc" target="_blank">The Colour Pads</a>
 
 
 The game is based on the popular simon toy.
-<a href="https://en.wikipedia.org/wiki/Simon_(game)">Simon</a>
+<a href="https://en.wikipedia.org/wiki/Simon_(game)" target="_blank">Simon</a>
 
 I used the colour wheel to find complimenting colours
-<a href="https://www.sessions.edu/color-calculator/">Colour Wheel</a>
+<a href="https://www.sessions.edu/color-calculator/" target="_blank">Colour Wheel</a>
