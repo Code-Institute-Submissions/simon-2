@@ -42,7 +42,7 @@ errors.
 <li>Sequence Checking:
 <ol><li>Click start</li>
 <li>Check that once the game sequence ends and the player enters their own, that it continues if correct or displays error when incorrect.</li>
-<li>See if the audio and visual error plays during an incorrect use sequence entry</li></ol></li>
+<li>See if the audio and visual error plays during an incorrect use sequence entry.</li></ol></li>
 
 
 <li>Media Queries:
