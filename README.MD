@@ -5,14 +5,15 @@ I wanted to make the site as simple as possible, whilst also fulfiling all the u
 simon game.
 
 <H2>UX</h2>
-<il>
-<li>As a user, I want to see a lot of information about the band on the homepage.</li>
-
-<li>As a user, I should be able to book the band easily.</li>
-
-<li>As a user, I want to be able to find out information about each band member and the band as a whole. </li>
-
-<li>As a User, I want to listen to the bands music and watch music videos.</li>
+<ul>
+<li>User Story: I am presented with a random series of button presses.</li>
+<li>User Story: Each time I input a series of button presses correctly, I see the same series of button presses but with an additional step.</li>
+<li>User Story: I hear a sound that corresponds to each button both when the series of button presses plays, and when I personally press a button.</li>
+<li>User Story: If I press the wrong button, I am notified that I have done so, and that series of button presses starts again to remind me of the pattern so I can try again.</li>
+<li>User Story: I can see how many steps are in the current series of button presses.</li>
+<li>User Story: If I want to restart, I can hit a button to do so, and the game will return to a single step.</li>
+<li>User Story: I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.</li>
+<li>User Story: I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.</li>
 </ul>
 
 <a href="https://www.figma.com/file/f3LqiWh2yNpwli9On1VCGfbI/simon-wireframe?node-id=0%3A1">Original Figma Wireframe</a>
@@ -20,11 +21,7 @@ simon game.
 
 <h2> Features </h2>
 <ul>
-<li>Latest Release and Next Events on index - Allows users to watch latest music video and book tickets</li>
-<li>Music - Allows users to stream to a few of the bands songs for free</li>
-<li>The Band Page - Allows users to get information about the band</li>
-<li>Gallery - Allows users to view pictures of the band</li>
-<li>Booking Form - Allows users to book band fast and easily</li>
+<li>Interactive simon game</li>
 </ul>
 
 <h2>Technologies Used</h2>
@@ -39,17 +36,13 @@ simon game.
 
 <h2>Testing</h2>
 I have tested this game website across different browsers and multiple mobile devices.
-I gave the Github pages link to multiple people and had them go through the site to see if the UX and to check if there was any 
+I gave the Github pages link to multiple people and had them go use the game to see if the UX and to check if there was any 
 errors.
 <ol>
-<li>Footer:
-<ol><li>Go to the Any page</li>
-<li>Check in developer tools to see that the footer is sticking to the bottom.</li>
-<li>Check to see that the footer content fits in all screen sizes and that media queries work.</li></ol></li>
-I had a problem with the footer running up the page on "Booking" and "Gallery" This was fixed with giving the body a 
-bottom padding equal to the footer size - this fix worked temporarily, and not perfectly on each size.
-In order to fix it more fully I used Calc() to give each page 100%vh - footer, 
-this worked more better, especially on Ipad pro which was the hardest size to fix.
+<li>Sequence Checking:
+<ol><li>Click start</li>
+<li>See if once the game sequence ends, and you entered your own that the game can differentiate between a correct and incorect user sequence</li>
+<li>See if the audio and visual error plays during an incorrect use sequence entry</li></ol></li>
 
 
 <li>Media Queries:
@@ -59,10 +52,10 @@ this worked more better, especially on Ipad pro which was the hardest size to fi
 
 
 
-<li>Booking form:
-<ol><li>Go to the "Booking" page</li>
-<li>Try to submit an empty form and see that an error message stating that there are required fields.</li>
-<li>Try to submit the form with an invalid email address see that an error message appears.</li></ol></li>
+<li>Strict Mode:
+<ol><li>Click strict mode on.</li>
+<li>Check that the light turns on when clicked.</li>
+<li>Check to see that once an error is entered that the game goes back to level one with a new random sequence.</li></ol></li>
 </ol>
 
 
