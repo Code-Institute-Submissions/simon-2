@@ -53,8 +53,6 @@ $(document).ready(function() {
                     gameSequence = [];
                     level = 1;
                     playerSequence = [];
-                    // startSequence();
-
                 }
                 showError();
                 error = true;
