@@ -39,43 +39,44 @@ $(document).ready(function() {
         playerSequence = [];
 
     });
-});
+    //pad presses
+    $(".colour-pads").click(function() {
+        id = $(this).attr("id");
+        color = $(this).attr("class").split(" ")[1];
+        makeActive(id, color);
+        playerSequence.push(id);
+        console.log(id + " " + color);
+        //check sequence
+        if (!checkSequence(playerSequence, gameSequence)) {
+            if (strictMode) {
+                console.log("strictMode");
+                gameSequence = [];
+                level = 1;
+                playerSequence = [];
+                // startSequence();
 
-
-//pad presses
-$(".colour-pads").click(function() {
-    id = $(this).attr("id");
-    color = $(this).attr("class").split(" ")[1];
-    makeActive(id, color);
-    playerSequence.push(id);
-    console.log(id + " " + color);
-    //check sequence
-    if (!checkSequence(playerSequence, gameSequence)) {
-        if (strictMode) {
-            console.log("strictMode");
-            gameSequence = [];
-            level = 1;
+            }
+            showError();
+            error = true;
             playerSequence = [];
-            // startSequence();
-
+            startSequence();
         }
-        showError();
-        error = true;
-        playerSequence = [];
-        startSequence();
-    }
-    if (playerSequence.length === gameSequence.length && playerSequence.length < LEVELS) {
-        level++;
-        error = false;
-        playerSequence = [];
-        startSequence();
-    }
-    //winner  
-    if (playerSequence.length === LEVELS) {
-        $(".counter").text("Win");
-    }
+        if (playerSequence.length === gameSequence.length && playerSequence.length < LEVELS) {
+            level++;
+            error = false;
+            playerSequence = [];
+            startSequence();
+        }
+        //winner  
+        if (playerSequence.length === LEVELS) {
+            $(".counter").text("Win");
+        }
+
+    });
+
 
 });
+
 
 
 
