@@ -104,11 +104,10 @@ function startSequence() {
     }, 1000);
 }
 
-//generate a random number
+//generate a random number and push into sequence
 function randomNumberGen(sequence) {
     var random = Math.floor(Math.random() * 4);
     sequence.push(random);
-    // return (random);
 }
 
 //add class colors and play sound

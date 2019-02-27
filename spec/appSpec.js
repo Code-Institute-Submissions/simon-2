@@ -1,6 +1,5 @@
 describe('Simon Functions', function() {
-
-// check sequence 
+    
     describe('Check Sequence function', function() {
         it('Returns true if arrays are equal', function() {
             var a = [1, 2];
@@ -21,7 +20,6 @@ describe('Simon Functions', function() {
 
 
 
-// random number generator
     describe('Check Random Number Generator', function() {
         it('Random Number Generator should return a number between 0 and 3', function() {
             let item;
