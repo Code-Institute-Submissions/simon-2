@@ -84,10 +84,10 @@ function startSequence() {
     console.log(level);
     $(".counter").text(level);
     if (!error) {
-        randomNumberGen();
+        randomNumberGen(gameSequence);
     }
     if (error && strictMode) {
-        randomNumberGen();
+        randomNumberGen(gameSequence);
     }
     var i = 0;
     var gameInterval = setInterval(function() {
@@ -105,9 +105,10 @@ function startSequence() {
 }
 
 //generate a random number
-function randomNumberGen() {
+function randomNumberGen(sequence) {
     var random = Math.floor(Math.random() * 4);
-    gameSequence.push(random);
+    sequence.push(random);
+    // return (random);
 }
 
 //add class colors and play sound
