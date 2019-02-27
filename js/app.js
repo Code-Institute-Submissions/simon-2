@@ -28,7 +28,7 @@ $(document).ready(function() {
     });
     //strict mode button
     $(".strict-button").click(function() {
-        //toggle true or false.
+        //toggle strict mode true or false.
         strictMode = !strictMode;
         level = 0;
         level++;
@@ -40,6 +40,7 @@ $(document).ready(function() {
     });
     //pad presses
     $(".colour-pads").click(function() {
+        //stops the user from pressing the pads before the game has started
         if (gameSequence.length != []) {
             id = $(this).attr("id");
             color = $(this).attr("class").split(" ")[1];
@@ -125,8 +126,7 @@ function addClassStrict() {
 
 
 
-// see if user correct
-
+// check the users sequence against the games
 function checkSequence(a, b) {
     for (let i = 0; i < a.length; i++) {
         if (a[i] != b[i]) {
