@@ -94,7 +94,7 @@ function startSequence() {
     var gameInterval = setInterval(function() {
         id = gameSequence[i];
         color = $("#" + id).attr("class");
-        color = color.split(" ")[1];
+        color = color.split(' ')[1];
         makeActive(id, color);
         i++;
         if (i == gameSequence.length) {
