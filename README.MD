@@ -39,6 +39,7 @@ simon game.
 
 <h2>Testing</h2>
 I utilised jasmine testing on this project, you can run the tests using this link: <a href="https://dougd94.github.io/simon/jasmine.html" target="_blank">Run Jasmine Testing</a>
+I tested two functions, My random number generator and my sequence check function.
 <br>
 I have tested this game website across different browsers and multiple mobile devices.
 I gave the Github pages link to multiple people and had them go use the game to see if the UX and to check if there was any 
