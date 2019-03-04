@@ -23,8 +23,7 @@ simon game.
 <ul>
 <li>Interactive simon game</li>
 <li>Has twenty levels and two game modes: normal and strict.</li>
-<li>The user cannot click before the game starts or during the games turn.</li>
-
+<li>The user cannot click the coloured pads before the game starts or during the games turn.</li>
 </ul>
 
 <h2>Technologies Used</h2>
