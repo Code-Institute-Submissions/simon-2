@@ -24,7 +24,6 @@ $(document).ready(function() {
         gameSequence = [];
         error = false;
         gameOn = true;
-        console.log("level " + level);
         level = 0;
         level++;
         startSequence();
@@ -37,7 +36,6 @@ $(document).ready(function() {
         level++;
         //light
         addClassStrict();
-        console.log(strictMode);
         gameOn = true;
         gameSequence = [];
         playerSequence = [];
@@ -51,11 +49,9 @@ $(document).ready(function() {
             color = $(this).attr("class").split(" ")[1];
             makeActive(id, color);
             playerSequence.push(id);
-            console.log(id + " " + color);
             //check sequence
             if (!checkSequence(playerSequence, gameSequence)) {
                 if (strictMode) {
-                    console.log("strictMode");
                     gameSequence = [];
                     level = 1;
                     playerSequence = [];
@@ -86,7 +82,6 @@ $(document).ready(function() {
 
 //starts the game
 function startSequence() {
-    console.log(level);
     gameOn = false;
     $(".counter").text(level);
     if (!error) {
@@ -100,7 +95,6 @@ function startSequence() {
         id = gameSequence[i];
         color = $("#" + id).attr("class");
         color = color.split(" ")[1];
-        console.log(id + " " + color);
         makeActive(id, color);
         i++;
         if (i == gameSequence.length) {
@@ -148,7 +142,6 @@ function checkSequence(a, b) {
 
 function showError() {
     errorTone();
-    console.log("error");
     var counter = 0;
     var error = setInterval(function() {
         $(".counter").text("!!");
