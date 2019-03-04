@@ -5,6 +5,7 @@ const LEVELS = 20;
 var id, color, level = 0;
 var strictMode = false;
 var error = false;
+var gameOn = false;
 
 var gameSound = [
     "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3", // yellow
@@ -21,6 +22,7 @@ $(document).ready(function() {
     $(".start").click(function() {
         gameSequence = [];
         error = false;
+        gameOn = true;
         console.log("level " + level);
         level = 0;
         level++;
@@ -35,13 +37,15 @@ $(document).ready(function() {
         //light
         addClassStrict();
         console.log(strictMode);
+        gameOn = true;
         gameSequence = [];
         playerSequence = [];
+        startSequence();
     });
     //pad presses
     $(".colour-pads").click(function() {
         //stops the user from pressing the pads before the game has started
-        if (gameSequence.length != []) {
+        if (gameOn) {
             id = $(this).attr("id");
             color = $(this).attr("class").split(" ")[1];
             makeActive(id, color);
@@ -82,6 +86,7 @@ $(document).ready(function() {
 //starts the game
 function startSequence() {
     console.log(level);
+    gameOn = false;
     $(".counter").text(level);
     if (!error) {
         randomNumberGen(gameSequence);
@@ -99,6 +104,7 @@ function startSequence() {
         i++;
         if (i == gameSequence.length) {
             i = 0;
+            gameOn = true;
             clearInterval(gameInterval);
         }
     }, 1000);
