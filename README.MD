@@ -68,8 +68,8 @@ errors.
 
 Errors:
 <br>The only error that remains is an "Uncaught TypeError: Cannot read property 'split' of undefined" that does not effect functionality at all,
-<br>this seems to be linked to the toggle strict button that I used instead of the standard implimentation, as it ussually only happens if you toggle strict off after toggling it on,
-<br>I fixed this by using a more normal strict mode implimentation,
+<br>this seems to be linked to the toggle strict button that I used instead of the standard implementation, as it ussually only happens if you toggle strict off after toggling it on,
+<br>I fixed this by using a more normal strict mode implementation,
 <br>but chose to just leave it as it was for deployment because I liked the toggle button functionality and aesthetic.
 
 
