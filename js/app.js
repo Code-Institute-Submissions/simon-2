@@ -5,6 +5,7 @@ const LEVELS = 20;
 var id, color, level = 0;
 var strictMode = false;
 var error = false;
+// gameOn exists to disallow the player to push the pads before the game starts or during the PC move.
 var gameOn = false;
 
 var gameSound = [
